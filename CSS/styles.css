@@ -1,0 +1,22 @@
+body {
+    font-family: 'Share Tech', sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+
+#bg{
+    fliter: blur(20px);
+}
+#bgdiv{
+    
+}
+ .flex{
+     display: flex;
+ }
+ .logo{
+    height: 60vh;
+ }
+.hero{
+    display: flex;
+    position: absolute;
+}
