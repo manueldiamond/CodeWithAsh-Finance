@@ -1,14 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <style>
+    /* Set the height of the header to 100% */
+    header {
+      height: 100%;
+      background-image: url('./images/R.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Set the height of the navigation bar to 50px */
+    nav {
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
+
+    /* Set the height of the navigation bar to 50px when scrolling down */
+    nav.scrolled {
+      height: 50px;
+    }
+
+    /* Add a transition effect when scrolling down */
+    nav {
+      transition: height 0.3s ease-in-out;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <h1>Code Wish Ash</h1>
-    </nav>
+  <header>
+    <nav></nav>
+  </header>
+
+  <script>
+    // Add a class to the navigation bar when scrolling down
+    window.addEventListener('scroll', function() {
+      var nav = document.querySelector('nav');
+      if (window.scrollY > 0) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
